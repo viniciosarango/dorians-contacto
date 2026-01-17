@@ -1,0 +1,511 @@
+:root{
+  --navy:#071a2c;
+  --navy2:#0b2742;
+  --yellow:#f2c200;
+  --white:#ffffff;
+  --muted:rgba(255,255,255,.75);
+  --card:rgba(255,255,255,.06);
+  --stroke:rgba(255,255,255,.12);
+  --shadow: 0 18px 50px rgba(0,0,0,.35);
+  --radius:18px;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: radial-gradient(900px 600px at 20% 10%, var(--navy2), var(--navy)) fixed;
+  color:var(--white);
+  min-height:100svh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:28px 16px;
+}
+
+.wrap{ width:min(520px, 100%); }
+
+.card{
+  background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
+  border:1px solid var(--stroke);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow:hidden;
+}
+
+.top{ padding:26px 22px 18px; }
+
+.badge{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:10px 12px;
+  border:1px solid var(--stroke);
+  border-radius:999px;
+  background:rgba(0,0,0,.18);
+  backdrop-filter: blur(6px);
+  font-weight:600;
+  letter-spacing:.2px;
+}
+
+.dot{
+  width:10px;height:10px;border-radius:50%;
+  background:var(--yellow);
+  box-shadow:0 0 0 6px rgba(242,194,0,.15);
+}
+
+.brand{ margin-top:18px; display:flex; align-items:center; gap:14px; }
+
+.brand{ margin-top:18px; display:flex; align-items:center; gap:14px; }
+
+/* LOGO */
+.logoBox{
+  width:56px;
+  height:56px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.12);
+  background: rgba(0,0,0,.18);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  flex: 0 0 56px;
+}
+
+.logoImg{
+  width:46px;
+  height:46px;
+  display:block;
+  object-fit:contain;
+  filter: drop-shadow(0 6px 14px rgba(0,0,0,.35));
+}
+
+
+
+h1{ margin:0; font-size:24px; line-height:1.15; }
+
+.tagline{ margin:6px 0 0; color:var(--muted); font-size:14.5px; }
+
+.divider{ height:1px; background:var(--stroke); margin:14px 0 0; }
+
+.content{ padding:18px 22px 22px; }
+
+.grid{ display:grid; gap:12px; margin-top:14px; }
+
+.btn{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  width:100%;
+  padding:14px 16px;
+  border-radius:16px;
+  border:1px solid var(--stroke);
+  background: var(--card);
+  color:var(--white);
+  text-decoration:none;
+  transition: transform .08s ease, background .15s ease, border-color .15s ease;
+}
+
+.btn:hover{ transform: translateY(-1px); background: rgba(255,255,255,.09); border-color: rgba(242,194,0,.45); }
+.btn:active{ transform: translateY(0px); }
+
+.left{ display:flex; align-items:center; gap:12px; min-width:0; }
+
+.icon{
+  width:42px;height:42px;
+  border-radius:14px;
+  display:grid;
+  place-items:center;
+  background: rgba(242,194,0,.14);
+  border:1px solid rgba(242,194,0,.25);
+  flex:0 0 auto;
+  font-size:18px;
+}
+
+.txt{ display:flex; flex-direction:column; min-width:0; }
+.title{ font-weight:800; font-size:15.5px; line-height:1.1; }
+.sub{
+  margin-top:3px;
+  font-size:13px;
+  color:var(--muted);
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.arrow{ opacity:.9; font-weight:900; color:rgba(255,255,255,.85); flex:0 0 auto; }
+
+.note{
+  margin-top:14px;
+  padding:12px 14px;
+  border-radius:16px;
+  border:1px dashed rgba(255,255,255,.18);
+  color:rgba(255,255,255,.82);
+  background: rgba(0,0,0,.14);
+  font-size:13.5px;
+  line-height:1.35;
+}
+
+.foot{ margin-top:14px; text-align:center; color:rgba(255,255,255,.6); font-size:12.5px; }
+
+.primary{
+  background: linear-gradient(180deg, rgba(242,194,0,.22), rgba(242,194,0,.12));
+  border-color: rgba(242,194,0,.35);
+}
+.primary:hover{
+  border-color: rgba(242,194,0,.65);
+  background: linear-gradient(180deg, rgba(242,194,0,.28), rgba(242,194,0,.14));
+}
+
+
+.socials{
+  margin-top: 14px;
+  padding: 14px 14px 16px;
+  border-radius: 18px;
+  border: 1px solid var(--stroke);
+  background: rgba(255,255,255,.04);
+}
+
+.socials-title{
+  margin: 0 0 12px;
+  text-align: center;
+  font-weight: 800;
+  font-size: 14.5px;
+  color: rgba(255,255,255,.9);
+}
+
+.socials-list{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.social-link{
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(242,194,0,.12);
+  border: 1px solid rgba(242,194,0,.35);
+  transition: transform .15s ease, background .2s ease, box-shadow .2s ease;
+}
+
+.social-link img{
+  width: 26px;
+  height: 26px;
+  display: block;
+}
+
+.social-link svg{
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.social-link svg *{
+  fill: currentColor;
+}
+
+.social-link:hover{
+  transform: translateY(-1px);
+  border-color: rgba(242,194,0,.65);
+  background: rgba(242,194,0,.20);
+}
+
+.social-link:active{
+  transform: translateY(0px);
+}
+
+.social-link.facebook img{
+  width: 26px;
+  height: 26px;
+}
+
+.social-link.tiktok img{
+  width: 27px;
+  height: 27px;
+}
+
+.social-link:hover{
+  transform: translateY(-2px);
+  background: rgba(242,194,0,.22);
+  box-shadow: 0 8px 20px rgba(242,194,0,.25);
+}
+
+
+/* =========================
+   FOOTER COMPARTIDO
+   ========================= */
+.siteFooter{
+  margin-top: 16px;
+  padding: 14px;
+  border-radius: 18px;
+  border: 1px solid var(--stroke);
+  background: rgba(255,255,255,.04);
+}
+
+.footerInner{
+  padding:18px 16px 20px;
+  text-align:center;
+}
+
+
+.footerBrand{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footerLogo{
+  width: 42px;
+  height: 42px;
+}
+
+.footerTitle{
+  font-weight: 900;
+  font-size: 14.5px;
+}
+
+.footerSub{
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.footerLinks{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:12px;
+  margin-bottom:12px;
+}
+
+
+.footerLink{
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(0,0,0,.14);
+  color: rgba(255,255,255,.9);
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.footerLink:hover{
+  border-color: rgba(242,194,0,.45);
+}
+
+.footerSocials{
+  display:flex;
+  gap:12px;
+  justify-content:center;
+  align-items:center;
+  margin-top:12px;
+}
+
+.footerCopy {
+  margin-top: 18px; /* separa el texto de los íconos */
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+
+/* Reutiliza tus botones sociales */
+.footerSocials .social-link{
+  width:52px;
+  height:52px;
+  border-radius:16px;
+  display:grid;
+  place-items:center;
+  background: rgba(242,194,0,.14);
+  border:1px solid rgba(242,194,0,.25);
+  transition: transform .08s ease, background .15s ease, border-color .15s ease;
+}
+
+.footerSocials .social-link img{
+  width:28px;
+  height:28px;
+  display:block;
+}
+
+.footerSocials .social-link:hover{
+  transform: translateY(-1px);
+  background: rgba(242,194,0,.18);
+  border-color: rgba(242,194,0,.45);
+}
+
+/* ===============================
+   FOOTER – Redes sociales grandes
+   =============================== */
+
+.siteFooter .social-link {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+}
+
+.siteFooter .social-link img {
+  width: 26px;
+  height: 26px;
+}
+
+/* --- Footer inyectado: siempre centrado --- */
+#footerMount{
+  width: min(520px, 100%);
+  margin: 18px auto 0;
+}
+
+
+
+/* --- Footer: bloque redes sociales --- */
+.footerSocialBlock{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:10px;
+  margin-top:14px;
+}
+
+.footerSocialTitle{
+  font-size:13px;
+  font-weight:600;
+  letter-spacing:.3px;
+  color:rgba(255,255,255,.75);
+}
+
+/* Ya los tenías, pero aquí quedan perfectos */
+.footerSocials{
+  display:flex;
+  gap:12px;
+  justify-content:center;
+  align-items:center;
+}
+
+
+/* =========================
+   FOTO GYM (INDEX)
+   ========================= */
+
+.gymPhotoWrap{
+  display: flex;
+  justify-content: center;
+  margin: 14px 0 18px;
+}
+
+.gymPhoto{
+  width: 100%;
+  max-width: 240px;      /* controla el tamaño */
+  aspect-ratio: 2 / 3;  /* vertical */
+  object-fit: cover;
+
+  border-radius: 18px;  /* estilo tarjeta */
+  border: 1px solid rgba(255,255,255,.14);
+
+  background: rgba(0,0,0,.2);
+  box-shadow: 0 18px 45px rgba(0,0,0,.45);
+
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+/* Pequeño efecto premium */
+.gymPhoto:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 22px 55px rgba(0,0,0,.55);
+}
+
+
+.note{
+  transition: opacity .25s ease, transform .25s ease;
+}
+
+.note.fade-out{
+  opacity: .2;
+  transform: translateY(2px);
+}
+
+.note.fade-in{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+   FOOTER – CTA Sesión Gratis (fino)
+   ========================= */
+
+.footerCtaBlock{
+  margin-top: 14px;
+  display: flex;
+  justify-content: center;
+}
+
+.footerCtaBtn{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 10px 14px;
+  border-radius: 14px;
+
+  text-decoration: none;
+  color: #071a2c;
+  font-weight: 800;
+  font-size: 13.5px;
+
+  background: rgba(242,194,0,.85);
+  border: 1px solid rgba(242,194,0,.9);
+
+  box-shadow: 0 8px 18px rgba(242,194,0,.25);
+  transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
+}
+
+.footerCtaBtn span{
+  font-size: 12px;
+  font-weight: 600;
+  opacity: .85;
+}
+
+.footerCtaBtn:hover{
+  transform: translateY(-1px);
+  background: rgba(242,194,0,.95);
+  box-shadow: 0 10px 22px rgba(242,194,0,.35);
+}
+
+.footerCtaBtn:active{
+  transform: translateY(0);
+}
+
+
+
+/* ===== FIX: íconos redes del FOOTER más visibles (sin tocar lo demás) ===== */
+
+/* Botón social del footer: más oscuro + borde amarillo */
+.footerSocials .social-link{
+  background: rgba(7,26,44,.78) !important;         /* navy */
+  border-color: rgba(242,194,0,.35) !important;
+  box-shadow: 0 10px 22px rgba(0,0,0,.22);
+  color: rgba(255,255,255,.95) !important;          /* para SVG inline */
+}
+
+/* Si son <img> (svg/png) los volvemos claros */
+.footerSocials .social-link img{
+  filter: brightness(0) invert(1) !important;       /* blanco */
+  opacity: .95;
+}
+
+/* Si son SVG inline, forzamos a usar currentColor */
+.footerSocials .social-link svg,
+.footerSocials .social-link svg *{
+  fill: currentColor !important;
+}
+
+/* Hover pro */
+.footerSocials .social-link:hover{
+  background: rgba(7,26,44,.92) !important;
+  border-color: rgba(242,194,0,.65) !important;
+  box-shadow: 0 14px 30px rgba(242,194,0,.16);
+}
