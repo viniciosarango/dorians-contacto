@@ -1,1 +1,10 @@
 .vscode/sftp.json
+
+# Imágenes
+*.jpg
+*.jpeg
+*.png
+*.webp
+
+# Configs locales
+.vscode/
